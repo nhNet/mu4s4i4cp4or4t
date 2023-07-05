@@ -1,0 +1,664 @@
+<html>
+<head>
+<title>Nicholas Huaman: Composition Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.plyr.io/1.6.13/plyr.css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+@font-face {
+    font-family: 'DK Lemon YS';
+    src: url('Fonts/DK LEMON YELLOW SUN.OTF');
+}
+@font-face {
+    font-family: 'WMAS';
+    src: url('Fonts/PLEASE WRITE ME A SONG.TTF');
+}
+@font-face {
+    font-family: 'WATERFALL PHOENIX';
+    src: url('Fonts/WATERFALL PHOENIX.TTF');
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+	margin:0;
+	color:white;
+	font-family: 'Ubuntu', sans-serif;
+}
+h1{
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #292e55;
+	position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+	z-index: 3;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #1e2240;
+}
+h3{font-weight: 400}
+.topnav {
+  overflow: hidden;
+  background-color: #292e55;
+  position: relative;
+  z-index: 4;
+  position: sticky;
+  top:0;
+  display:none;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #1e2240;
+}
+
+.topnav .icon:hover {
+  background-color: initial;
+}
+@media screen and (max-width: 600px) {
+  .navbar li.floatright,
+  .navbar li {float: none;}
+  .navbar{display: none}
+  .topnav{display: block}
+
+  .tab-content{
+    font-size: 14px;
+  }
+}
+.navbar .floatright{
+	float: right;
+}
+.introduce_yourself{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	background: radial-gradient(#002233, #001122) #002233;
+  /* background: url(Mixing.png);
+  background-size: cover; */
+	box-shadow: 0 0 16px 7px rgb(14 47 56 / 80%);
+	position: relative;
+}
+.introduction_circle{
+	width: 500px;
+  /* height: 500px; */
+  /* line-height: 500px; */
+  border-radius: 50%;
+  color: #fff;
+  /* background: radial-gradient(#005566, #003344) #003344; */
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor:pointer;
+	transition: transform 0.1s;
+	z-index: 2;
+}
+.introduction_circle:hover{
+	transform: scale(1.02);
+}
+.myphoto{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+}
+.polkaoverlay{
+	background: url(polka.png) no-repeat;
+	background-size: 35%;
+	opacity: 0.4;
+	position: absolute;
+  top: 49px;
+	width: 100%;
+	/* height: 560px; */
+  height: 250px;
+	z-index: 1;
+
+}
+.section{
+	width: 100%;
+	min-height: 600px;
+}
+.arrangements, .dictations{
+	background: #fff;
+	color:black;
+  position: relative;
+  overflow: hidden;
+}
+.about{
+  background: #455482;
+  background: #1b2543;
+  /* color: black; */
+}
+.thecn{height: auto;max-width: 100%;float: right;position: absolute;top:0;right:0;z-index: 0;max-height: 720px;}
+.lbandcn{height: auto;max-width: 50%;float: left;position: absolute;top:0;left:0;z-index: 0;}
+.sectiontext{
+	/* position:absolute; */
+	clear: right;
+	padding: 10px 30px;
+  max-width:50%;
+  z-index: 1;
+  position: relative;
+}
+.dicttext{
+  margin-left: 50%;
+}
+.playlist--list {
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+  font-family: Avenir, "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 0.95;
+  color: #565D64;
+}
+.playlist--list li {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  padding: 15px 10px;
+  background: #ffffff;
+  /* border: 1px solid #dbe3e8; */
+  border-top: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.playlist--list li:first-child {
+  /* border-top: 1px solid #dbe3e8; */
+}
+.playlist--list li:hover {
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+.playlist--list li.active {
+  background-color: #CCDADE;
+  color: #565D64;
+}
+.compositions {
+  /* The image used */
+  background-image: url("mixing.png");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.anchor {
+  scroll-margin-top: 46px;
+}
+.plyr__controls{
+  border-radius: 22px!important;
+  border: none!important;
+}
+.playlist--list li:first-of-type {
+    border-radius: 13px 13px 0 0;
+}
+.playlist--list li:last-of-type {
+    border-radius: 0 0 13px 13px;
+}
+p{
+  font-size: 17px;
+}
+.skill {
+  background-color: #8276ba;
+  color: #fff;
+  line-height: 35px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  cursor:pointer;
+}
+.dropdown {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: #2c3e50;
+  /* font-weight: bold; */
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #1a252f;
+}
+.tab-label::after {
+  content: ">";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: white;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #1a252f;
+}
+
+.dropdown:checked + .tab-label {
+  background: #1a252f;
+}
+.dropdown:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+.dropdown:checked ~ .tab-content {
+  max-height: 300vh;
+  padding: 1em;
+}
+.extrasbox{
+  color: black;
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #d2d2d2;
+}
+a{color:white;text-decoration: none}
+footer{
+  text-align: center;
+  color: black;
+  border-top: 1px solid #333;
+  font-size: 12px;
+  padding: 17px;
+  z-index: 2;
+  position: relative;
+  background: white;
+}
+@media only screen and (max-width: 1280px) {
+  .sectiontext {
+    max-width: 100%;
+  }
+  .dicttext{
+    margin-left: 0;
+  }
+  .thecn{
+    position: relative;
+    float: none;
+    height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: -10px;
+  }
+  .lbandcn{
+    position: relative;
+    height: 420px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    float: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .thecn{
+    height: 180px;
+  }
+  .lbandcn{
+    height: 180px;
+  }
+}
+</style>
+</head>
+<body>
+	<ul class="navbar">
+		<!-- <li><a class="active" href="">Logo</a></li> -->
+		<li><a href="#home">Home</a></li>
+		<li><a href="#comps">Compositions</a></li>
+		<li><a href="#arrs">Arrangements</a></li>
+		<li><a href="#dicts">Dictations</a></li>
+		<li class="floatright"><a href="#about">About</a></li>
+	</ul>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="#home">2023 Portfolio</a>
+    <div id="myLinks">
+      <a href="#comps" onclick="closenav()">Compositions</a>
+      <a href="#arrs" onclick="closenav()">Arrangements</a>
+      <a href="#dicts" onclick="closenav()">Dictations</a>
+      <a href="#about" onclick="closenav()">About</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="openclosenav()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+	<div id="home" class="polkaoverlay anchor"></div>
+	<div class="introduce_yourself">
+		<div class="introduction_circle">
+			<div class="circle_content">
+				<img class="myphoto" src="NHMusic.png">
+				<h1 style="margin-bottom: 2px;">Nicholas Huaman</h1>
+				<span style="font-family:'WMAS'">Composer / Arranger</span>
+			</div>
+		</div>
+	</div>
+  <div style="background: linear-gradient(240deg, #427888, #1f409d);height: 4px;"></div>
+  <div id="about" class="section anchor about">
+    <div class="sectiontext">
+      <h1>About Me</h1>
+      <p>I'm Nicholas, currently studying Music and Music Technology at the University of Nottingham, in the United Kingdom. My passion lies in composing music for visual media such as film soundtracks and video games.</p>
+      <p>From a young age, I've held film composers in high regard, finding immense inspiration in their work. To learn and train my ear, I delved into arranging various pieces of music, with my ambitious journey beginning at the age of eleven when I tackled the entire "How To Train Your Dragon" soundtrack. Analyzing the sheet music enabled me to get a grasp on the elements used in composing film music, nurturing my understanding and skills in the field.</p>
+      <p>Similarly, ZAG holds a special place in my heart, namely because of the music in Miraculous, which has played an integral role in shaping my musical development. Having the opportunity to play a part in the music creation process for future ZAG projects would be a dream come true!</p>
+      16.09.2004 | England<br>
+      Contact: <a href="mailto:nicholashuaman@gmail.com">nicholashuaman@gmail.com</a><br>
+      Instagram: <a href="https://instagram.com/nicholashuaman">@nicholashuaman</a><br><br>
+      <div class="about-item skills">
+          <h1>Skills</h1>
+          <span class="skill">Sibelius</span>
+          <span class="skill">Musescore</span>
+          <span class="skill">FL Studio</span>
+          <span class="skill">English</span>
+          <span class="skill">Spanish</span>
+          <span class="skill">Photoshop</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">PHP</span><br><br>
+          <span>Additionally, I have <b>some</b> experience with DAWs such as <b>ProTools</b>, Logic X Pro and Ableton Live, but my expertise lies in the skills mentioned above.</span><br><br>
+      </div>
+    </div>
+  </div>
+	<div id="comps" class="section anchor compositions">
+		<div class="sectiontext">
+			<br><h1>Compositions</h1>
+      <h3 class="audiofiles">Audio Files:</h3>
+			<div class="playlist">
+		  <div class="plyr">
+				<audio controls type="audio/mp3"></audio>
+			</div>
+			<ul class='playlist--list playlist--list1'>
+				<li data-id="0" data-audio="Music/1. Portal Beleaguerment (2023).mp3">1. Portal Beleaguerment (2023)</li>
+				<li data-id="1" data-audio="Music/2. Film Suite (2022).mp3">2. Film Suite (2022)</li>
+        <li data-id="2" data-audio="Music/3. Forest Rhapsody (2022).mp3">3. Forest Rhapsody (2022)</li>
+        <li data-id="3" data-audio="Music/4. The Store (2023).mp3">4. The Store (2023)</li>
+			</ul>
+		</div><br>
+    <h3>Information:</h3>
+    <div class="tabs">
+      <div class="tab">
+        <input type="checkbox" id="chck1" class="dropdown">
+        <label class="tab-label" for="chck1">Portal Beleaguerment</label>
+        <div class="tab-content">
+          "Portal Beleaguerment" is a 1-minute and 28-second soundtrack designed to accompany an intense escape scene. Envisioned for the story of an extraordinary alliance and friendship between two humans and an alien, this soundtrack tells the story of the penultimate confrontation between the heroes and the relentless government agents.<br><br>
+          The story unfolds through various sections: the antagonist's relentless approach is portrayed by marching-like rhythms and low-pitched notes (00:00 - 00:11), while the protagonist's fleeing is accompanied by fretful violin pizzicato (00:12 - 00:17) and ascending piano sequences that build anticipation. As the tension rises, there is a momentary respite, but the energy remains tense (00:22 - 00:29). The protagonists rush and prepare to resist the impending break-in. The main theme resurfaces, reinforced by the tuba, as the characters brace themselves. A dramatic climax signifies the antagonist forcing open the door (00:29 - 00:31).<br><br>
+          However, a glimmer of hope emerges as a portal opens, giving them a glimpse of a lush and peaceful paradise where they can take refuge (00:34 - 00:41). The alien enters the portal, followed by the others (00:54 - 00:58). The music changes drastically, creating an intriguing and uplifting atmosphere as the protagonist takes a deep breath, feels good about themselves, and picks up the courage to enter the portal, leaving all the chaos behind  (00:58 - 01:12).<br><br>
+          The scene reaches a final moment of splendour and resolution, and the camera pans to reveal the new location (01:12 - 01:18). The characters exchange smiles and congratulatory dialogue, relieved that the ordeal is finally over (01:18 - 01:26). However, the piece ends on an ominous tonic note in the cello, indicative of more challenges ahead.<br><br>
+          The score can be provided upon request!<br>
+          <!-- <a href="Music/1. Portal Beleaguerment - Full Score.pdf" target="_blank" style="color:#078;text-decoration:underline;">View Score</a><br> -->
+        </div>
+      </div>
+      <div class="tab">
+        <input type="checkbox" id="chck2" class="dropdown">
+        <label class="tab-label" for="chck2">Film Suite</label>
+        <div class="tab-content">
+          This composition, designed for an animated film soundtrack, comprises three distinct scenes that capture the essence of adventure, intrigue, and drama. The first section, "A Tale of a Train Fight," captures the energy and intensity of a fierce battle with its dissonant brass and train whistle-like strings. The rhythmic sounds of trains are brought to life through the use of the strings and percussion, creating an immersive sonic experience (00:00 - 01:38).<br><br>
+          In the second section: "Creeping around the Launch Site"  (01:39 - 03:25), the composition explores a scene of tension and stealth set in a rainforest. The piano and strings take center stage, conveying a sense of creeping and exploration. Techniques such as pizzicato strings, repeated quavers, and changes in accentuation heighten the intrigue and mystery, keeping the listener captivated.<br><br>
+          "Cogitation" (03:30 - 04:56) delves into the protagonist's introspection and contemplation. Reflective melodies, sustained notes, and gradual crescendos create a contemplative atmosphere, while the integration of instruments such as the harp and electric guitar adds unique timbral colours, enhancing the emotional depth of the composition.
+        </div>
+      </div>
+      <div class="tab">
+        <input type="checkbox" id="chck3" class="dropdown">
+        <label class="tab-label" for="chck3">Forest Rhapsody</label>
+        <div class="tab-content">
+          Forest Rhapsody is a composition that is minimalist in nature, intended for an easy overworld level in a 2D platformer game that I had started programming.
+        </div>
+      </div>
+      <div class="tab">
+        <input type="checkbox" id="chck4" class="dropdown">
+        <label class="tab-label" for="chck4">The Store</label>
+        <div class="tab-content">
+          The Store is also meant for the 2D platformer game [see Forest Rhapsody], and is for the background music when the user enters the shop.
+        </div>
+      </div>
+    </div>
+    <br><br><br>
+		</div>
+	</div>
+  <div class="extrasbox">EXTRAS:</div>
+	<div id="arrs" class="section anchor arrangements">
+		<div class="sectiontext">
+			<h1>Arrangements</h1>
+      <p>The music in this section contains implicit quotations from themes in the show "Miraculous: Tales of Ladybug and Cat Noir". The arrangements displayed below showcase my ability to creatively incorporate and manipulate the iconic themes and motifs from the show and movie and often include a few of my own original compositional ideas in between!</p>
+			<div class="playlist">
+  		  <div class="plyr">
+  				<audio controls></audio>
+  			</div>
+  			<ul class='playlist--list playlist--list2'>
+  				<li data-id="0" data-audio="Music/Arrangements/1. Underwater (2020).mp3">1. Underwater (2020)</li>
+  				<li data-id="1" data-audio="Music/Arrangements/2. AwakeningMedley.mp3">2. AwakeningMedley (2023)</li>
+  				<li data-id="2" data-audio="Music/Arrangements/3. Zoe Lee (2021).mp3">3. Zoe Lee (2021)</li>
+  				<li data-id="3" data-audio="Music/Arrangements/4. BackInStyle (2022).mp3">4. Back in Style (2022)</li>
+  			</ul>
+  		</div><br>
+      <div class="tabs">
+        <div class="tab">
+          <input type="checkbox" id="chcks1" class="dropdown">
+          <label class="tab-label" for="chcks1">1. Underwater</label>
+          <div class="tab-content">
+            Underwater is a track for a level in a game titled AllStarBrawl, a 3D Miraculous puzzle fan-game I had started to develop in Unity in 2020. Its relation to Miraculous is found in the chord pattern, as well as the use of the main theme.
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" id="chcks2" class="dropdown">
+          <label class="tab-label" for="chcks2">2. Awakening Medley</label>
+          <div class="tab-content">
+            This piece combines all snippets of the Miraculous Movie OST released on Jeremy Zag's Instagram story (as of December 2021), that I have attempted to combine and make a coherent musical narrative out of.
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" id="chcks3" class="dropdown">
+          <label class="tab-label" for="chcks3">3. Zoe Lee</label>
+          <div class="tab-content">
+            This arrangement tells the empowerment story of Vesperia: coming from a past where she is bullied to becoming one of Paris' most-loved superheroes.<br><br>
+            Using Vesperia's transformation music as a base, I very slowly infer and build up to the actual transformation music, until the very end when I quote it in full.<br><br>
+            <a href="Music/Arrangements/3. Zoe Lee - Full Score.pdf" target="_blank" style="color:#078;text-decoration:underline;">View Score</a>
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" id="chcks4" class="dropdown">
+          <label class="tab-label" for="chcks4">4. Back in Style</label>
+          <div class="tab-content">
+            This arrangement is a different version of the modelling photoshoot music found at the beginning of S2E21 Queen Wasp. It uses a piano, vibraphone, a string quartet and drums.
+          </div>
+        </div>
+      </div>
+		</div>
+		<img class="thecn" src="cn.png">
+	</div>
+	<div id="dicts" class="section anchor dictations">
+		<div class="sectiontext dicttext">
+			<h1>Melodic Dictations</h1>
+      <p>This section features unaltered music owned by ZAG, serving as a testament to my good musical ear and substantiating my claim that having the scores in front of me grants me an unparalleled comprehension of the music in Miraculous.</p>
+			<div class="playlist">
+  		  <div class="plyr">
+  				<audio controls></audio>
+  			</div>
+  			<ul class='playlist--list playlist--list2'>
+        <li data-id="0" data-audio="Music/Dictations/5. PlusForts Ensemble.mp3">1. Plus Forts Ensemble (2023)</li>
+        <li data-id="1" data-audio="Music/Dictations/2. MiraculousTheMovie - Trailer Compilation.mp3">2. [MiraculousTheMovie] Trailer Compilation (2023)</li>
+  				<li data-id="2" data-audio="Music/Dictations/1. Derision End Scene.mp3">3. [514] End Scene (2023)</li>
+  				<li data-id="3" data-audio="Music/Dictations/3. Marinette's Past.mp3">4. [514] Marinette's Flashback (2023)</li>
+  				<li data-id="4" data-audio="Music/Dictations/4. I'll tell you everything.mp3">5. [513] I'll tell you everything (2023)</li>
+  			</ul>
+  		</div>
+      <p style="font-size:14px;color:#666;">Also, I have started to organise a group project with the other ZAG Influencers to make cover for Stronger Together, with all of us singing a line in our own language, to post upon the official release of the movie!</p>
+		</div>
+		<img class="lbandcn" src="lbandcn.png">
+	</div>
+  <footer>
+    The graphics featured in the extras section of this website are the property of ZAG and are used purely for illustrative purposes. I acknowledge that I do not possess ownership rights over them.
+  </footer>
+	<script src='//cdn.plyr.io/1.6.13/plyr.js'></script>
+  <div style="display: none;"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="plyr-captions-off" viewBox="0 0 18 18"><path d="M1 1c-.6 0-1 .4-1 1v11c0 .6.4 1 1 1h4.6l2.7 2.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.7-2.7H17c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1H1zm4.52 10.15c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41C8.47 4.96 7.46 3.76 5.5 3.76c-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69zm7.57 0c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41c-.28-1.15-1.29-2.35-3.25-2.35-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69z" fill-rule="evenodd" fill-opacity=".5"/></symbol><symbol id="plyr-captions-on" viewBox="0 0 18 18"><path d="M1 1c-.6 0-1 .4-1 1v11c0 .6.4 1 1 1h4.6l2.7 2.7c.2.2.4.3.7.3.3 0 .5-.1.7-.3l2.7-2.7H17c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1H1zm4.52 10.15c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41C8.47 4.96 7.46 3.76 5.5 3.76c-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69zm7.57 0c1.99 0 3.01-1.32 3.28-2.41l-1.29-.39c-.19.66-.78 1.45-1.99 1.45-1.14 0-2.2-.83-2.2-2.34 0-1.61 1.12-2.37 2.18-2.37 1.23 0 1.78.75 1.95 1.43l1.3-.41c-.28-1.15-1.29-2.35-3.25-2.35-1.9 0-3.61 1.44-3.61 3.7 0 2.26 1.65 3.69 3.63 3.69z" fill-rule="evenodd"/></symbol><symbol id="plyr-enter-fullscreen" viewBox="0 0 18 18"><path d="M10 3h3.6l-4 4L11 8.4l4-4V8h2V1h-7zM7 9.6l-4 4V10H1v7h7v-2H4.4l4-4z"/></symbol><symbol id="plyr-exit-fullscreen" viewBox="0 0 18 18"><path d="M1 12h3.6l-4 4L2 17.4l4-4V17h2v-7H1zM16 .6l-4 4V1h-2v7h7V6h-3.6l4-4z"/></symbol><symbol id="plyr-fast-forward" viewBox="0 0 18 18"><path d="M7.875 7.171L0 1v16l7.875-6.171V17L18 9 7.875 1z"/></symbol><symbol id="plyr-muted" viewBox="0 0 18 18"><path d="M12.4 12.5l2.1-2.1 2.1 2.1 1.4-1.4L15.9 9 18 6.9l-1.4-1.4-2.1 2.1-2.1-2.1L11 6.9 13.1 9 11 11.1zM3.786 6.008H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z"/></symbol><symbol id="plyr-pause" viewBox="0 0 18 18"><path d="M6 1H3c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h3c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1zM12 1c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h3c.6 0 1-.4 1-1V2c0-.6-.4-1-1-1h-3z"/></symbol><symbol id="plyr-play" viewBox="0 0 18 18"><path d="M15.562 8.1L3.87.225C3.052-.337 2 .225 2 1.125v15.75c0 .9 1.052 1.462 1.87.9L15.563 9.9c.584-.45.584-1.35 0-1.8z"/></symbol><symbol id="plyr-restart" viewBox="0 0 18 18"><path d="M9.7 1.2l.7 6.4 2.1-2.1c1.9 1.9 1.9 5.1 0 7-.9 1-2.2 1.5-3.5 1.5-1.3 0-2.6-.5-3.5-1.5-1.9-1.9-1.9-5.1 0-7 .6-.6 1.4-1.1 2.3-1.3l-.6-1.9C6 2.6 4.9 3.2 4 4.1 1.3 6.8 1.3 11.2 4 14c1.3 1.3 3.1 2 4.9 2 1.9 0 3.6-.7 4.9-2 2.7-2.7 2.7-7.1 0-9.9L16 1.9l-6.3-.7z"/></symbol><symbol id="plyr-rewind" viewBox="0 0 18 18"><path d="M10.125 1L0 9l10.125 8v-6.171L18 17V1l-7.875 6.171z"/></symbol><symbol id="plyr-volume" viewBox="0 0 18 18"><path d="M15.6 3.3c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4C15.4 5.9 16 7.4 16 9c0 1.6-.6 3.1-1.8 4.3-.4.4-.4 1 0 1.4.2.2.5.3.7.3.3 0 .5-.1.7-.3C17.1 13.2 18 11.2 18 9s-.9-4.2-2.4-5.7z"/><path d="M11.282 5.282a.909.909 0 0 0 0 1.316c.735.735.995 1.458.995 2.402 0 .936-.425 1.917-.995 2.487a.909.909 0 0 0 0 1.316c.145.145.636.262 1.018.156a.725.725 0 0 0 .298-.156C13.773 11.733 14.13 10.16 14.13 9c0-.17-.002-.34-.011-.51-.053-.992-.319-2.005-1.522-3.208a.909.909 0 0 0-1.316 0zM3.786 6.008H.714C.286 6.008 0 6.31 0 6.76v4.512c0 .452.286.752.714.752h3.072l4.071 3.858c.5.3 1.143 0 1.143-.602V2.752c0-.601-.643-.977-1.143-.601L3.786 6.008z"/></symbol></svg></div>
+  <script>
+
+			var radios = [];
+			var players = [];
+			var songs = [];
+			for(var z=0;z<document.querySelectorAll('.plyr').length;z++){
+				plyr.setup(document.querySelectorAll('.plyr')[z], {"controls":['play','progress','duration','mute','volume','download']});
+				radios.push(document.querySelectorAll('.plyr')[z].plyr);
+				players.push(document.querySelectorAll('.playlist')[z]);
+				songs.push(players[z].querySelectorAll('.playlist--list li'));
+				var i;
+				var active = null;
+
+				for(i = 0; i < songs[z].length; i++) {
+					songs[z][i].onclick = changeChannel;
+				}
+
+				setSource(getId(songs[z][0]), buildSource(songs[z][0]), false, z);
+
+				document.querySelector('.plyr').addEventListener('ended', nextSong);
+
+				function changeChannel(e) {
+				  setSource(getId(e.target), buildSource(e.target), true, [].indexOf.call(document.querySelectorAll('.playlist--list'), e.target.parentElement));
+					setTimeout(function(){radios[z].play();},100);
+				}
+
+				function getId(el) {
+				  return Number(el.getAttribute('data-id'));
+				}
+
+				function buildSource(el) {
+				  var obj = [{
+				    src: el.getAttribute('data-audio'),
+				    type: 'audio/ogg' }];
+
+
+				  return obj;
+				}
+
+				function setSource(selected, sourceAudio, play, theZed) {
+				  if (active !== selected) {
+				    active = selected;
+				    radios[theZed].source({
+				      type: 'audio',
+				      title: 'test',
+				      sources: sourceAudio });
+
+
+				    for (var i = 0; i < songs[theZed].length; i++) {
+				      if (Number(songs[theZed][i].getAttribute('data-id')) === selected) {
+				        songs[theZed][i].className = 'active';
+				      } else {
+				        songs[theZed][i].className = '';
+				      }
+				    }
+
+				    if (play) {
+				      radios[theZed].play();
+				    }
+				  } else {
+				    radios[theZed].togglePlay();
+				  }
+          const audios = document.querySelectorAll('audio');
+          function pauseOtherAudios({ target }) {
+            for (const audio of audios) {
+              if (audio !== target) {
+                audio.pause();
+              }
+            }
+          }
+
+          // Listen for the 'play' event on all the <audio> elements.
+          for (const audio of audios) {
+            audio.addEventListener('play', pauseOtherAudios);
+          }
+				}
+
+				function nextSong(e) {
+				  var next = active + 1;
+
+				  if (next < songs.length) {
+				    setSource(getId(songs[z][next]), buildSource(songs[z][next]), true);
+				  }
+				}
+			}
+      function openclosenav() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+      function closenav() {
+        document.getElementById("myLinks").style.display = "none";
+      }
+      const expression = /(Mac|iPhone|iPod|iPad)/i;
+      if (expression.test(navigator.platform)) {
+        document.querySelector(".audiofiles").innerHTML+='&nbsp;<span style="font-size:10px;">If you\'re using Safari there\'s a high chance of this not working. Please change browser or non-iOS device to be able to listen to the audio!</span>';
+      } else {
+          console.log('Other device detected!');
+      }
+  </script>
+</body>
+</html>
